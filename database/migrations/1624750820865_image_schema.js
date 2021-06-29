@@ -4,8 +4,8 @@
 const Schema = use('Schema')
 
 class ImageSchema extends Schema {
-  up () {
-    this.create('images', (table) => {
+  up() {
+    this.create('images', table => {
       table.increments()
       table.string('path', 255)
       table.integer('size').unsigned()
@@ -15,8 +15,8 @@ class ImageSchema extends Schema {
     })
   }
 
-  down () {
-    this.drop('images'
+  down() {
+    this.drop('images')
   }
 }
 
